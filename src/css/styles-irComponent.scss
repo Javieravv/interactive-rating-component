@@ -1,0 +1,147 @@
+@import "variables.scss";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fontFamily;
+}
+
+main {
+    min-height: calc(100vh - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $color-Very-Dark-Blue;
+}
+
+.section-main {
+    width: $width-sectionMain;
+    height: $height-sectionMain;
+    background: $color-Dark-Blue;
+    border-radius: $borderRadios-seciontMain;
+    padding: $padding-sectionMain $padding-sectionMain;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .icono-star {
+        width: $size-iconStart;
+        height: $size-iconStart;
+        background: $color-Medium-Grey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    h2 {
+        color: $color-White;
+        font-weight: 700;
+        font-size: calc($fontSize * 2);
+    }
+
+    p {
+        line-height: 1.5;
+        font-size: calc($fontSize + 3px);
+        color: $color-Light-Grey;
+    }
+
+    .options {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        article {
+            width: $size-article;
+            height: $size-article;
+            border-radius: 50%;
+            background: $color-Medium-Grey;
+            margin: 0 auto;
+            color: $color-Light-Grey;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transition: background $delayTransition ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                background: $color-Orange;
+                color: $color-White;
+            }
+        }
+
+    }
+    
+    button {
+        border-radius: calc($borderRadios-seciontMain + 15px);
+        height: $size-article;
+        background: $color-Orange;
+        color: $color-White;
+        text-transform: uppercase;
+        font-size: $fontSize;
+        font-weight: 700;
+        letter-spacing: 4px; 
+        border: none;
+        cursor: pointer;
+        transition: background $delayTransition ease-in-out;
+
+        &:hover {
+            background: $color-White;
+            color: $color-Orange;
+        }
+    }
+
+    @media screen and (max-width: $widthMobile) {
+        width: 90%;
+        padding-left: calc($padding-sectionMain - 5px);
+    }
+}
+
+
+
+// Seccion agradecimiento
+.section-thanks {
+    width: $width-sectionMain;
+    height: $height-sectionMain;
+    background: $color-Dark-Blue;
+    border-radius: $borderRadios-seciontMain;
+    padding: $padding-sectionMain $padding-sectionMain;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .paragraph-selected {
+        color: $color-Orange;
+        background: $color-Medium-Grey1;
+        opacity: 0.8;
+        padding: 7px 25px;
+        border-radius: $borderRadios-seciontMain;
+        font-size: $fontSize;
+    }
+
+    h2 {
+        color: $color-White;
+        font-weight: 700;
+        font-size: calc($fontSize * 2);
+    }
+
+    p {
+        line-height: 1.5;
+        font-size: calc($fontSize + 3px);
+        color: $color-Light-Grey;
+        text-align: center;
+        font-size: calc($fontSize + 2px);
+    }
+
+    @media screen and (max-width: $widthMobile) {
+        width: 90%;
+        padding-left: calc($padding-sectionMain - 5px);
+    }
+}
+
