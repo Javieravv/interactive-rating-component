@@ -8,15 +8,11 @@ export const InteractiveRagintComponent = () => {
 
     const handleClickArticle = (e) => {
         option = parseInt(e.target.textContent);
-        console.log ('OPCION = ', option)
     }
 
     const handleClickButton = (e) => {
         setOptionSelected(option)
-        console.log ('CLICK DADO. el valor escogido es ', optionSelected)
     }
-
-    console.log ('EL VALOR ESCOGIDO ES ', optionSelected)
 
     if (optionSelected !== 0) {
         return <FormresultInteractiveRating 
